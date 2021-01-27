@@ -24,29 +24,33 @@ here, so you can use modern CSS like -webkit-filter and -webkit-mask-image
 background color.)
 */
 .sheet-toolbar {
-  border-bottom: 1px solid @border-color-divider;
+  border-bottom: 5px solid @border-color-divider;
   box-shadow: none;
 }
 
 .thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
   -webkit-filter: invert(100%);
+  -filter: invert(100%);
 }
 img.content-dark {
+  -filter: invert(100%);
   -webkit-filter: invert(100%);
 }
 img.content-light {
+  -filter: invert(100%);
   -webkit-filter: invert(100%);
 }
 
 .mail-label {
   -webkit-filter: contrast(110%) brightness(85%);
+  -filter: contrast(110%) brightness(85%);
 }
 
 #message-list .message-item-wrap .message-item-white-wrap {
-  box-shadow: 0 0 0.5px rgba(255, 255, 255, 0.28),
-    0 1px 1.5px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0.5px @hot-pink,
+    0 1px 1.5px @hot-pink;
 }
 
 .thread-list .list-item:not(.unread):not(.selected):not(.focused) {
-  color: #aaa;
+  color: darken(@purple, 40%);
 }
